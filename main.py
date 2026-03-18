@@ -2,7 +2,7 @@ import info_estudiantes
 import info_proyecto
 from vehiculo import Vehiculo
 from registro_historial import RegistroHistorial
-
+from simulacion_hilos import ejecutar_simulacion 
 
 # Instancia global del registro de historial
 registro = RegistroHistorial()
@@ -89,7 +89,7 @@ def menu_estacionamiento():
 def main():
     """Función principal con menú"""
     salir = False
-    
+
     while not salir:
         print("\n" + "="*50)
         print("         MENÚ PRINCIPAL")
@@ -97,20 +97,16 @@ def main():
         print("\n  1. Mostrar nombres de estudiantes")
         print("  2. Mostrar descripción del proyecto")
         print("  3. Acceder a gestión de estacionamiento")
+        print("  4. Ejecutar simulación caótica de hilos")
         print("  0. Salir\n")
-        
+
         opcion = input("Ingrese su opción: ")
-        
-        if opcion == "1":
+
+
+        elif opcion == "4":
             print()
-            info_estudiantes.nombre_estudiantes()
-        
-        elif opcion == "2":
-            print()
-            info_proyecto.descripcion_proyecto()
-        
-        elif opcion == "3":
-            menu_estacionamiento()
+            ejecutar_simulacion() 
+
         
         elif opcion == "0":
             print("\n" + "="*50)
