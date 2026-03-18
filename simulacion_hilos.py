@@ -36,7 +36,6 @@ def accion_vehiculo(parqueadero, vehiculo):
         ingreso_exitoso = parqueadero.ingresar(vehiculo)
         
         if ingreso_exitoso:
-            # ¡Logró entrar!
             time.sleep(2) # Se queda 2 segundos estacionado
             # Mostrar cuántos intentos le tomó entrar hace que el log sea más interesante
             if intentos > 0:

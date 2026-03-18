@@ -102,11 +102,21 @@ def main():
 
         opcion = input("Ingrese su opción: ")
 
+        # AQUÍ ESTABAN FALTANDO LAS CONDICIONES INICIALES (if y elif)
+        if opcion == "1":
+            print()
+            info_estudiantes.nombre_estudiantes()
+        
+        elif opcion == "2":
+            print()
+            info_proyecto.descripcion_proyecto()
+        
+        elif opcion == "3":
+            menu_estacionamiento()
 
         elif opcion == "4":
             print()
             ejecutar_simulacion() 
-
         
         elif opcion == "0":
             print("\n" + "="*50)
@@ -120,4 +130,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
