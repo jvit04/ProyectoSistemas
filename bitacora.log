@@ -1,0 +1,89 @@
+2026-03-19 16:31:41,207 - MainThread - INFO - INICIANDO SIMULACIÓN CAÓTICA DESDE MENÚ
+2026-03-19 16:31:41,208 - Hilo-1 - INFO - Ingreso registrado | placa=TJU-549 | cupos_restantes=2
+2026-03-19 16:31:41,421 - Hilo-2 - INFO - Ingreso registrado | placa=KBS-251 | cupos_restantes=1
+2026-03-19 16:31:41,609 - Hilo-3 - INFO - Ingreso registrado | placa=UQO-366 | cupos_restantes=0
+2026-03-19 16:31:41,944 - Hilo-4 - WARNING - Sin cupo — ingreso rechazado | placa=IJI-596
+2026-03-19 16:31:41,972 - Hilo-5 - WARNING - Sin cupo — ingreso rechazado | placa=GQR-423
+2026-03-19 16:31:42,066 - Hilo-6 - WARNING - Sin cupo — ingreso rechazado | placa=QOL-663
+2026-03-19 16:31:42,146 - Hilo-7 - WARNING - Sin cupo — ingreso rechazado | placa=UFX-491
+2026-03-19 16:31:42,595 - Hilo-8 - WARNING - Sin cupo — ingreso rechazado | placa=OPG-723
+2026-03-19 16:31:42,611 - Hilo-9 - WARNING - Sin cupo — ingreso rechazado | placa=GHA-237
+2026-03-19 16:31:42,945 - Hilo-4 - WARNING - Sin cupo — ingreso rechazado | placa=IJI-596
+2026-03-19 16:31:42,946 - Hilo-10 - WARNING - Sin cupo — ingreso rechazado | placa=NGL-963
+2026-03-19 16:31:42,973 - Hilo-5 - WARNING - Sin cupo — ingreso rechazado | placa=GQR-423
+2026-03-19 16:31:43,067 - Hilo-6 - WARNING - Sin cupo — ingreso rechazado | placa=QOL-663
+2026-03-19 16:31:43,069 - Hilo-11 - WARNING - Sin cupo — ingreso rechazado | placa=PZF-609
+2026-03-19 16:31:43,146 - Hilo-7 - WARNING - Sin cupo — ingreso rechazado | placa=UFX-491
+2026-03-19 16:31:43,208 - Hilo-1 - INFO - Salida registrada | placa=TJU-549 | permanencia=2s | cupos_disponibles=1
+2026-03-19 16:31:43,422 - Hilo-2 - INFO - Salida registrada | placa=KBS-251 | permanencia=2s | cupos_disponibles=2
+2026-03-19 16:31:43,596 - Hilo-8 - INFO - Ingreso registrado | placa=OPG-723 | cupos_restantes=1
+2026-03-19 16:31:43,610 - Hilo-3 - INFO - Salida registrada | placa=UQO-366 | permanencia=2s | cupos_disponibles=2
+2026-03-19 16:31:43,611 - Hilo-9 - INFO - Ingreso registrado | placa=GHA-237 | cupos_restantes=1
+2026-03-19 16:31:43,945 - Hilo-4 - INFO - Ingreso registrado | placa=IJI-596 | cupos_restantes=0
+2026-03-19 16:31:43,946 - Hilo-10 - WARNING - Sin cupo — ingreso rechazado | placa=NGL-963
+2026-03-19 16:31:43,973 - Hilo-5 - WARNING - Sin cupo — ingreso rechazado | placa=GQR-423
+2026-03-19 16:31:44,069 - Hilo-6 - WARNING - Sin cupo — ingreso rechazado | placa=QOL-663
+2026-03-19 16:31:44,069 - Hilo-11 - WARNING - Sin cupo — ingreso rechazado | placa=PZF-609
+2026-03-19 16:31:44,147 - Hilo-7 - WARNING - Sin cupo — ingreso rechazado | placa=UFX-491
+2026-03-19 16:31:44,946 - Hilo-10 - WARNING - Sin cupo — ingreso rechazado | placa=NGL-963
+2026-03-19 16:31:44,974 - Hilo-5 - WARNING - Sin cupo — ingreso rechazado | placa=GQR-423
+2026-03-19 16:31:45,069 - Hilo-6 - WARNING - Sin cupo — ingreso rechazado | placa=QOL-663
+2026-03-19 16:31:45,069 - Hilo-11 - WARNING - Sin cupo — ingreso rechazado | placa=PZF-609
+2026-03-19 16:31:45,147 - Hilo-7 - WARNING - Sin cupo — ingreso rechazado | placa=UFX-491
+2026-03-19 16:31:45,596 - Hilo-8 - INFO - Salida registrada | placa=OPG-723 | permanencia=2s | cupos_disponibles=1
+2026-03-19 16:31:45,611 - Hilo-9 - INFO - Salida registrada | placa=GHA-237 | permanencia=2s | cupos_disponibles=2
+2026-03-19 16:31:45,946 - Hilo-4 - INFO - Salida registrada | placa=IJI-596 | permanencia=2s | cupos_disponibles=3
+2026-03-19 16:31:45,947 - Hilo-10 - INFO - Ingreso registrado | placa=NGL-963 | cupos_restantes=2
+2026-03-19 16:31:45,974 - Hilo-5 - INFO - Ingreso registrado | placa=GQR-423 | cupos_restantes=1
+2026-03-19 16:31:46,069 - Hilo-6 - INFO - Ingreso registrado | placa=QOL-663 | cupos_restantes=0
+2026-03-19 16:31:46,070 - Hilo-11 - WARNING - Sin cupo — ingreso rechazado | placa=PZF-609
+2026-03-19 16:31:46,147 - Hilo-7 - WARNING - Sin cupo — ingreso rechazado | placa=UFX-491
+2026-03-19 16:31:47,070 - Hilo-11 - WARNING - Sin cupo — ingreso rechazado | placa=PZF-609
+2026-03-19 16:31:47,148 - Hilo-7 - WARNING - Sin cupo — ingreso rechazado | placa=UFX-491
+2026-03-19 16:31:47,947 - Hilo-10 - INFO - Salida registrada | placa=NGL-963 | permanencia=2s | cupos_disponibles=1
+2026-03-19 16:31:47,974 - Hilo-5 - INFO - Salida registrada | placa=GQR-423 | permanencia=2s | cupos_disponibles=2
+2026-03-19 16:31:48,070 - Hilo-6 - INFO - Salida registrada | placa=QOL-663 | permanencia=2s | cupos_disponibles=3
+2026-03-19 16:31:48,071 - Hilo-11 - INFO - Ingreso registrado | placa=PZF-609 | cupos_restantes=2
+2026-03-19 16:31:48,148 - Hilo-7 - INFO - Ingreso registrado | placa=UFX-491 | cupos_restantes=1
+2026-03-19 16:31:50,071 - Hilo-11 - INFO - Salida registrada | placa=PZF-609 | permanencia=2s | cupos_disponibles=2
+2026-03-19 16:31:50,148 - Hilo-7 - INFO - Salida registrada | placa=UFX-491 | permanencia=2s | cupos_disponibles=3
+2026-03-19 16:31:50,149 - MainThread - INFO - Estado consultado | ocupados=0 | disponibles=3
+2026-03-19 16:32:09,699 - MainThread - INFO - INICIANDO SIMULACIÓN CAÓTICA DESDE MENÚ
+2026-03-19 16:32:09,701 - Hilo-1 - INFO - Ingreso registrado | placa=CNP-552 | cupos_restantes=2
+2026-03-19 16:32:09,962 - Hilo-2 - INFO - Ingreso registrado | placa=ULW-416 | cupos_restantes=1
+2026-03-19 16:32:10,302 - Hilo-3 - INFO - Ingreso registrado | placa=YNG-684 | cupos_restantes=0
+2026-03-19 16:32:10,738 - Hilo-4 - WARNING - Sin cupo — ingreso rechazado | placa=NIH-105
+2026-03-19 16:32:11,118 - Hilo-5 - WARNING - Sin cupo — ingreso rechazado | placa=ULP-068
+2026-03-19 16:32:11,247 - Hilo-6 - WARNING - Sin cupo — ingreso rechazado | placa=HHH-111
+2026-03-19 16:32:11,262 - Hilo-7 - WARNING - Sin cupo — ingreso rechazado | placa=ROG-862
+2026-03-19 16:32:11,359 - Hilo-8 - WARNING - Sin cupo — ingreso rechazado | placa=MQW-802
+2026-03-19 16:32:11,702 - Hilo-1 - INFO - Salida registrada | placa=CNP-552 | permanencia=2s | cupos_disponibles=1
+2026-03-19 16:32:11,738 - Hilo-4 - INFO - Ingreso registrado | placa=NIH-105 | cupos_restantes=0
+2026-03-19 16:32:11,774 - Hilo-9 - WARNING - Sin cupo — ingreso rechazado | placa=MFC-714
+2026-03-19 16:32:11,816 - Hilo-10 - WARNING - Sin cupo — ingreso rechazado | placa=EZO-525
+2026-03-19 16:32:11,965 - Hilo-2 - INFO - Salida registrada | placa=ULW-416 | permanencia=2s | cupos_disponibles=1
+2026-03-19 16:32:12,118 - Hilo-5 - INFO - Ingreso registrado | placa=ULP-068 | cupos_restantes=0
+2026-03-19 16:32:12,248 - Hilo-6 - WARNING - Sin cupo — ingreso rechazado | placa=HHH-111
+2026-03-19 16:32:12,263 - Hilo-7 - WARNING - Sin cupo — ingreso rechazado | placa=ROG-862
+2026-03-19 16:32:12,303 - Hilo-3 - INFO - Salida registrada | placa=YNG-684 | permanencia=2s | cupos_disponibles=1
+2026-03-19 16:32:12,359 - Hilo-8 - INFO - Ingreso registrado | placa=MQW-802 | cupos_restantes=0
+2026-03-19 16:32:12,774 - Hilo-9 - WARNING - Sin cupo — ingreso rechazado | placa=MFC-714
+2026-03-19 16:32:12,816 - Hilo-10 - WARNING - Sin cupo — ingreso rechazado | placa=EZO-525
+2026-03-19 16:32:13,249 - Hilo-6 - WARNING - Sin cupo — ingreso rechazado | placa=HHH-111
+2026-03-19 16:32:13,263 - Hilo-7 - WARNING - Sin cupo — ingreso rechazado | placa=ROG-862
+2026-03-19 16:32:13,740 - Hilo-4 - INFO - Salida registrada | placa=NIH-105 | permanencia=2s | cupos_disponibles=1
+2026-03-19 16:32:13,775 - Hilo-9 - INFO - Ingreso registrado | placa=MFC-714 | cupos_restantes=0
+2026-03-19 16:32:13,817 - Hilo-10 - WARNING - Sin cupo — ingreso rechazado | placa=EZO-525
+2026-03-19 16:32:14,119 - Hilo-5 - INFO - Salida registrada | placa=ULP-068 | permanencia=2s | cupos_disponibles=1
+2026-03-19 16:32:14,249 - Hilo-6 - INFO - Ingreso registrado | placa=HHH-111 | cupos_restantes=0
+2026-03-19 16:32:14,264 - Hilo-7 - WARNING - Sin cupo — ingreso rechazado | placa=ROG-862
+2026-03-19 16:32:14,364 - Hilo-8 - INFO - Salida registrada | placa=MQW-802 | permanencia=2s | cupos_disponibles=1
+2026-03-19 16:32:14,817 - Hilo-10 - INFO - Ingreso registrado | placa=EZO-525 | cupos_restantes=0
+2026-03-19 16:32:15,264 - Hilo-7 - WARNING - Sin cupo — ingreso rechazado | placa=ROG-862
+2026-03-19 16:32:15,775 - Hilo-9 - INFO - Salida registrada | placa=MFC-714 | permanencia=2s | cupos_disponibles=1
+2026-03-19 16:32:16,250 - Hilo-6 - INFO - Salida registrada | placa=HHH-111 | permanencia=2s | cupos_disponibles=2
+2026-03-19 16:32:16,264 - Hilo-7 - INFO - Ingreso registrado | placa=ROG-862 | cupos_restantes=1
+2026-03-19 16:32:16,817 - Hilo-10 - INFO - Salida registrada | placa=EZO-525 | permanencia=2s | cupos_disponibles=2
+2026-03-19 16:32:18,265 - Hilo-7 - INFO - Salida registrada | placa=ROG-862 | permanencia=2s | cupos_disponibles=3
+2026-03-19 16:32:18,265 - MainThread - INFO - Estado consultado | ocupados=0 | disponibles=3
+2026-03-19 16:32:49,076 - MainThread - INFO - PROGRAMA CERRADO por el usuario

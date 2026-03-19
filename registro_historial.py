@@ -1,7 +1,8 @@
 import threading
+import logging
 from datetime import datetime
 
-
+logger = logging.getLogger(__name__)
 class RegistroHistorial:
     """
     Entidad auxiliar de auditoría que guarda el historial completo 
@@ -35,6 +36,7 @@ class RegistroHistorial:
                 'segundos': segundos
             }
             self.historial.append(evento)
+            logger.info(f"Evento añadido al historial | tipo={tipo} | placa={placa} | segundos={segundos}")
             print(f"✓ Evento registrado: {tipo} - {placa}")
     
     def mostrar(self):
@@ -42,6 +44,9 @@ class RegistroHistorial:
         Imprime el historial completo con timestamps.
         """
         with self._lock:
+
+            logger.debug(f"Mostrando historial | total_eventos={len(self.historial)}")
+
             if not self.historial:
                 print("\n⚠️  El historial está vacío.\n")
                 return

@@ -1,14 +1,24 @@
+import logging
 import info_estudiantes
 import info_proyecto
 from vehiculo import Vehiculo
 from registro_historial import RegistroHistorial
 from simulacion_hilos import ejecutar_simulacion 
 
+# Configuración de la bitácora (Aporte Integrante 1)
+logging.basicConfig(
+    filename='bitacora.log',
+    filemode='w',
+    level=logging.INFO,
+    format='%(asctime)s - %(threadName)s - %(levelname)s - %(message)s'
+)
+ 
+logger = logging.getLogger(__name__)
+
 # Instancia global del registro de historial
 registro = RegistroHistorial()
-# Diccionario para almacenar vehículos activos en el estacionamiento
+# Diccionario para almacenar vehículos activos
 vehiculos_activos = {}
-
 
 def menu_estacionamiento():
     """Menú de gestión del estacionamiento"""
@@ -35,12 +45,13 @@ def menu_estacionamiento():
             tipo = input("Ingrese tipo de vehículo: ").lower()
             
             if placa in vehiculos_activos:
-                print(f"\n⚠️  El vehículo {placa} ya está registrado en el estacionamiento.\n")
+                print(f"\n⚠️  El vehículo {placa} ya está registrado.\n")
             else:
                 vehiculo = Vehiculo(placa, propietario, tipo)
                 vehiculo.registrar_entrada()
                 vehiculos_activos[placa] = vehiculo
                 registro.agregar('INGRESO', placa)
+                logger.info(f"INGRESO MANUAL | placa={placa} | propietario={propietario} | tipo={tipo}")
                 print()
         
         elif opcion == "2":
@@ -48,6 +59,7 @@ def menu_estacionamiento():
             placa = input("Ingrese placa del vehículo a retirar: ").upper()
             
             if placa not in vehiculos_activos:
+                logger.warning(f"Salida rechazada — placa no activa | placa={placa}")
                 print(f"\n⚠️  El vehículo {placa} no se encuentra activo.\n")
             else:
                 vehiculo = vehiculos_activos[placa]
@@ -55,6 +67,7 @@ def menu_estacionamiento():
                 segundos = vehiculo.calcular_permanencia()
                 registro.agregar('SALIDA', placa, segundos)
                 del vehiculos_activos[placa]
+                logger.info(f"SALIDA MANUAL | placa={placa} | permanencia={segundos}s | activos_restantes={len(vehiculos_activos)}")
                 print(f"✓ Tiempo de permanencia: {segundos} segundos\n")
         
         elif opcion == "3":
@@ -71,11 +84,9 @@ def menu_estacionamiento():
                 print("="*70)
                 print(f"{'Placa':<12} {'Propietario':<20} {'Tipo':<15} {'Hora Entrada':<15}")
                 print("-"*70)
-                
                 for placa, vehiculo in vehiculos_activos.items():
                     hora = vehiculo.hora_entrada.strftime("%H:%M:%S")
                     print(f"{placa:<12} {vehiculo.propietario:<20} {vehiculo.tipo:<15} {hora:<15}")
-                
                 print("="*70)
                 print(f"Total de vehículos: {len(vehiculos_activos)}\n")
         
@@ -85,11 +96,10 @@ def menu_estacionamiento():
         else:
             print("\n⚠️  Opción inválida. Intente de nuevo.\n")
 
-
 def main():
     """Función principal con menú"""
     salir = False
-
+    
     while not salir:
         print("\n" + "="*50)
         print("         MENÚ PRINCIPAL")
@@ -97,12 +107,11 @@ def main():
         print("\n  1. Mostrar nombres de estudiantes")
         print("  2. Mostrar descripción del proyecto")
         print("  3. Acceder a gestión de estacionamiento")
-        print("  4. Ejecutar simulación caótica de hilos")
+        print("  4. Ejecutar simulación caótica de hilos") # Tu aporte
         print("  0. Salir\n")
-
+        
         opcion = input("Ingrese su opción: ")
-
-        # AQUÍ ESTABAN FALTANDO LAS CONDICIONES INICIALES (if y elif)
+        
         if opcion == "1":
             print()
             info_estudiantes.nombre_estudiantes()
@@ -113,20 +122,21 @@ def main():
         
         elif opcion == "3":
             menu_estacionamiento()
-
+            
         elif opcion == "4":
             print()
+            logger.info("INICIANDO SIMULACIÓN CAÓTICA DESDE MENÚ")
             ejecutar_simulacion() 
         
         elif opcion == "0":
             print("\n" + "="*50)
             print("         Fin del programa.")
             print("="*50 + "\n")
+            logger.info("PROGRAMA CERRADO por el usuario")
             salir = True
         
         else:
             print("\n⚠️  Opción inválida. Intente de nuevo.\n")
-
 
 if __name__ == "__main__":
     main()
