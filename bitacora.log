@@ -1,0 +1,10 @@
+2026-03-19 15:10:18,187 - MainThread - INFO - Evento añadido al historial | tipo=INGRESO | placa=ASDFASDF | segundos=None
+2026-03-19 15:10:18,187 - MainThread - INFO - INGRESO | placa=ASDFASDF | propietario=juan | tipo=auto
+2026-03-19 15:10:39,064 - MainThread - INFO - Evento añadido al historial | tipo=INGRESO | placa=FDAS | segundos=None
+2026-03-19 15:10:39,064 - MainThread - INFO - INGRESO | placa=FDAS | propietario=jjo | tipo=moto
+2026-03-19 15:10:50,450 - MainThread - INFO - Evento añadido al historial | tipo=INGRESO | placa=ALBIN | segundos=None
+2026-03-19 15:10:50,450 - MainThread - INFO - INGRESO | placa=ALBIN | propietario=alvin | tipo=moto
+2026-03-19 15:11:14,418 - MainThread - INFO - Evento añadido al historial | tipo=INGRESO | placa=MAMI | segundos=None
+2026-03-19 15:11:14,418 - MainThread - INFO - INGRESO | placa=MAMI | propietario=mamit | tipo=camioneta
+2026-03-19 15:15:44,731 - MainThread - INFO - Usuario salió del menú de estacionamiento
+2026-03-19 15:15:46,506 - MainThread - INFO - PROGRAMA CERRADO por el usuario

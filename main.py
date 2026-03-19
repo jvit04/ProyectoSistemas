@@ -1,8 +1,19 @@
+import logging
 import info_estudiantes
 import info_proyecto
 from vehiculo import Vehiculo
 from registro_historial import RegistroHistorial
 
+# Configuración del log
+logging.basicConfig(
+    filename='bitacora.log',
+    filemode='w',
+    level=logging.INFO,
+    format='%(asctime)s - %(threadName)s - %(levelname)s - %(message)s'
+)
+ 
+logger = logging.getLogger(__name__)
+#
 
 # Instancia global del registro de historial
 registro = RegistroHistorial()
@@ -41,6 +52,7 @@ def menu_estacionamiento():
                 vehiculo.registrar_entrada()
                 vehiculos_activos[placa] = vehiculo
                 registro.agregar('INGRESO', placa)
+                logger.info(f"INGRESO | placa={placa} | propietario={propietario} | tipo={tipo}")
                 print()
         
         elif opcion == "2":
@@ -48,6 +60,7 @@ def menu_estacionamiento():
             placa = input("Ingrese placa del vehículo a retirar: ").upper()
             
             if placa not in vehiculos_activos:
+                logger.warning(f"Salida rechazada — placa no activa | placa={placa}")
                 print(f"\n⚠️  El vehículo {placa} no se encuentra activo.\n")
             else:
                 vehiculo = vehiculos_activos[placa]
@@ -55,6 +68,7 @@ def menu_estacionamiento():
                 segundos = vehiculo.calcular_permanencia()
                 registro.agregar('SALIDA', placa, segundos)
                 del vehiculos_activos[placa]
+                logger.info(f"SALIDA | placa={placa} | permanencia={segundos}s | activos_restantes={len(vehiculos_activos)}")
                 print(f"✓ Tiempo de permanencia: {segundos} segundos\n")
         
         elif opcion == "3":
@@ -80,9 +94,11 @@ def menu_estacionamiento():
                 print(f"Total de vehículos: {len(vehiculos_activos)}\n")
         
         elif opcion == "5":
+            logger.info("Usuario salió del menú de estacionamiento")
             salir_submenu = True
         
         else:
+            logger.warning(f"Opción inválida en menú estacionamiento: '{opcion}'")
             print("\n⚠️  Opción inválida. Intente de nuevo.\n")
 
 
@@ -116,9 +132,11 @@ def main():
             print("\n" + "="*50)
             print("         Fin del programa.")
             print("="*50 + "\n")
+            logger.info("PROGRAMA CERRADO por el usuario")
             salir = True
         
         else:
+            logger.warning(f"Opción inválida en menú principal: '{opcion}'")
             print("\n⚠️  Opción inválida. Intente de nuevo.\n")
 
 

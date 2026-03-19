@@ -1,9 +1,22 @@
 import threading
 import time
 import random
+import logging
 from estacionamiento import Estacionamiento
 from vehiculo import Vehiculo
 from registro_historial import RegistroHistorial
+
+#config log
+logging.basicConfig(
+    filename='bitacora.log',
+    filemode='w',
+    level=logging.INFO,
+    format='%(asctime)s - %(threadName)s - %(levelname)s - %(message)s'
+)
+ 
+logger = logging.getLogger(__name__)
+
+#
 
 def simular_vehiculo(estacionamiento, registro, placa, propietario, tipo):
     v = Vehiculo(placa, propietario, tipo) #ejecuta cada hilo
@@ -36,6 +49,7 @@ def ejecutar_simulacion():
 
     hilos = []
 
+    logger.info(f"SIMULACIÓN INICIADA — {mi_estacionamiento.nombre} | capacidad={mi_estacionamiento.capacidad_total}")
     print(f"--- Iniciando simulación en {mi_estacionamiento.nombre} ---")
 
     # INSTANCIACIÓN DEL GRUPO DE HILOS
@@ -51,6 +65,8 @@ def ejecutar_simulacion():
     # Esperar a que todos los hilos terminen
     for h in hilos:
         h.join()
+
+    logger.info("SIMULACIÓN FINALIZADA — todos los hilos completados")
 
     print("\n Simulación finalizada")
     mi_estacionamiento.estado()
