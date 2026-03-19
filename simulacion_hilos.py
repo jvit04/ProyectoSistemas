@@ -24,31 +24,31 @@ import threading
 def accion_vehiculo(parqueadero, vehiculo):
     """
     Intenta ingresar. Si está lleno, espera 1 segundo y vuelve a intentar
-    hasta que consiga un cupo.
+    infinitamente hasta que consiga un cupo (ningún nodo se rinde).
     """
     print(f"[{threading.current_thread().name}] llegando: {vehiculo.placa}...")
     
     ingreso_exitoso = False
     intentos = 0
     
-    # Mientras no logre ingresar y no se rinda (ej. máximo 5 intentos)
-    while not ingreso_exitoso and intentos < 5:
+    # Bucle infinito: solo se rompe cuando ingreso_exitoso sea True
+    while not ingreso_exitoso:
         ingreso_exitoso = parqueadero.ingresar(vehiculo)
         
         if ingreso_exitoso:
-            # ¡Logró entrar!
             time.sleep(2) # Se queda 2 segundos estacionado
-            print(f"[{threading.current_thread().name}] 🟢 retirando {vehiculo.placa}...")
+            # Mostrar cuántos intentos le tomó entrar hace que el log sea más interesante
+            if intentos > 0:
+                print(f"[{threading.current_thread().name}] 🟢 {vehiculo.placa} LOGRÓ ENTRAR tras {intentos} intentos. Retirando...")
+            else:
+                print(f"[{threading.current_thread().name}] 🟢 retirando {vehiculo.placa}...")
+            
             parqueadero.salir(vehiculo.placa)
         else:
             # Está lleno, le toca esperar
-            print(f"[{threading.current_thread().name}] 🟡 {vehiculo.placa} en espera... (Intento {intentos + 1})")
-            time.sleep(1) # Espera 1 segundo antes de volver a intentar entrar
             intentos += 1
-            
-    if not ingreso_exitoso:
-        # Si después de 5 intentos no pudo entrar, se va
-        print(f"[{threading.current_thread().name}] 🔴 {vehiculo.placa} se cansó de esperar y se fue.")
+            print(f"[{threading.current_thread().name}] 🟡 {vehiculo.placa} en espera... (Intento {intentos})")
+            time.sleep(1) # Espera 1 segundo antes de volver a intentar entrar
 
 def generar_placa_aleatoria():
     """Genera una placa con formato AAA-111"""
